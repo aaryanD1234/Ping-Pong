@@ -45,7 +45,10 @@ function draw(){
     strokeWeight(0.5);
    paddle1Y = mouseY; 
    rect(paddle1X,paddle1Y,paddle1,paddle1Height,100);
-   
+   if (touches.length > 0){
+    paddle1Y = touches[0].y;
+    rect(paddle1X,paddle1Y,paddle1,paddle1Height,100);
+   }
    
     //pc computer paddle
     fill("#FFA500");
